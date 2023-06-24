@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="has-background-black">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DTL</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  </head>
+
+  <body>
+    <div class="container mt-5 has-text-centered">
+      <div class="columns">
+        <div class="column"></div>
+        <div class="column">
+          <h1 class="is-size-1 mb-5 has-text-white">What am I?</h1>
+
+          <div class="field">
+            <input type="text" class="input is-warning is-large" id="input" />
+          </div>
+
+          <button class="button is-large is-fullwidth is-warning" onclick="protectpasscode()">Submit Answer</button>
+          <h1 id="winner" class="is-size-1" style="display: none; color: white">You have solved the riddle! 🎉</h1>
+        </div>
+        <div class="column"></div>
+      </div>
+    </div>
+
+    <script>
+      function protectpasscode() {
+        var a = document.getElementById("input");
+        var b = document.getElementById("winner");
+        if (a.value === "reality") {
+          b.style.display = "block";
+        } else {
+          b.style.display = "none";
+          alert("Try again!");
+        }
+      }
+    </script>
+  </body>
+</html>
